@@ -217,6 +217,12 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.topbar-left > div {
+  min-width: 0;
 }
 
 .page-heading {
@@ -225,6 +231,7 @@ body {
   font-weight: 700;
   color: var(--navy-900);
   line-height: 1.25;
+  overflow-wrap: break-word;
 }
 
 .page-subtitle {
@@ -1450,12 +1457,26 @@ body {
     padding: 0.85rem 1rem;
   }
 
+  .page-heading {
+    font-size: 1.12rem;
+  }
+
   .topbar-actions {
     display: none;
   }
 
   .content-area {
-    padding: 1rem;
+    padding: 0.9rem;
+  }
+
+  .action-bar-links {
+    width: 100%;
+  }
+
+  .action-bar-links .btn {
+    flex: 1 1 auto;
+    font-size: 0.84rem;
+    padding: 0.45rem 0.75rem;
   }
 
   .form-grid-2,
